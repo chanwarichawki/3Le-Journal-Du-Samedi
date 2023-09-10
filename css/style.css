@@ -20,7 +20,7 @@ font-family: 'Staatliches', cursive;*/
 }
 body{
   font-family: 'EB Garamond', serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 h1,h2,h3,h4,h5,h6{
@@ -223,12 +223,29 @@ hr{
 .content{
   display: flex;
   margin: 3rem 0;
+  align-items: start;  
 }
 .articles{
   flex: auto;
 }
 .popular{
   flex: 350px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+.popular ul li{
+  display: grid;
+  grid-template-columns:100px auto;
+  place-items: center center;
+  margin-bottom: 5rem;
+}
+.popular ul li div:first-child{
+  font-size: 3rem;
+  color: var(--gray-hint);
+}
+.popular ul li p, .popular ul li h3{
+  margin: 0.2rem;
 }
 .underline{
   padding-bottom: 1.5rem;
@@ -244,6 +261,7 @@ hr{
   "content img"
   "author img"
   "details img";
+  margin-bottom: 2rem;
 }
 .articles article img{
   grid-area: img;
@@ -259,4 +277,7 @@ hr{
 }
 .articles article .text-hint{
   grid-area: details;
+}
+.articles article h3, .articles article p{
+  margin: 0.2rem 0;
 }
